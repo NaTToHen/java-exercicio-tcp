@@ -9,7 +9,7 @@ public class Cliente {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         Carro carro = new Carro("Gol", "ABC-1234");
 
-        Socket socket = new Socket("192.168.194.29", 54321);
+        Socket socket = new Socket("localhost", 54321);
 
         ObjectOutputStream saida = new ObjectOutputStream(socket.getOutputStream());
         saida.writeObject(carro);
